@@ -17,7 +17,7 @@ models.Base.metadata.create_all(bind=engine)
 app = FastAPI(
 
     title="FastAPI - Candidatos",
-    description="API para crear/consultar candidatos en una BD Sqlite",
+    description="API para crear/consultar candidatos de una BD Sqlite",
     version="0.0.1",
     contact={
         "name": "Galder Canduela"
