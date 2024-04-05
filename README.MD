@@ -1,18 +1,25 @@
 # FASTAPI - APP
 
-Requisitos:
+<h4>Requisitos</h4>
 
-python3
-pip: python3 -m pip install --upgrade pip
-virtualenv: pip3 install virtualenv
+<b>python3.8+</b>
+<b>pip:</b> python3 -m pip install --upgrade pip
+<b>virtualenv:</b> pip3 install virtualenv
+
+<h4>Dependencias</h4>
+
+En la carpeta `/venv` ya estan todas las dependencias preinstaladas del archivo <b>requiremens.txt</b>
+
+Si queremos instalarlas manualmente o añadir nuevas, una vez dentro del entorrno virtual ejecutar:
+
+```(venv) ~/FastAPI_Sqlite$ pip3 install -r requirements.txt```
 
 
 ### Ejecutar aplicación manualmente
 
 1. Desde terminal, iniciar entorno virtual en linux `python3 -m venv venv` desde la raiz.
-   (En la carpeta /venv ya estan todas las dependencias preinstaladas)
 
-2. Ejecutar la aplicacion: `uvicorn src:main:app --reload`
+2. Ejecutar la aplicacion: `(venv) uvicorn src:main:app --reload`
 
 ### Ejecutar con Makefile
 
