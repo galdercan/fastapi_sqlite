@@ -2,9 +2,9 @@
 
 <h4>Requisitos</h4>
 
-<b>python3.8+</b>
-<b>pip:</b> python3 -m pip install --upgrade pip
-<b>virtualenv:</b> pip3 install virtualenv
+<b>python3.8+</b>  
+<b>pip:</b> python3 -m pip install --upgrade pip  
+<b>virtualenv:</b> pip3 install virtualenv  
 
 <h4>Dependencias</h4>
 
