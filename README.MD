@@ -32,9 +32,9 @@ INFO:     Application startup complete.
 ```
 
 
-### API Swagger: `http://127.0.0.1:8000`
+### API Swagger | http://127.0.0.1:8000
 
-Una vez iniciada la API , / nos redireccionara a /docs
+Una vez iniciada la API , la url de inicio `/` nos redireccionara al swagger `/docs`
 
 <h4>Crear un candidato</h4>
 
