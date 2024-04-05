@@ -12,8 +12,10 @@ En la carpeta `/venv` ya estan todas las dependencias preinstaladas del archivo 
 
 Si queremos instalarlas manualmente o añadir nuevas, una vez dentro del entorrno virtual ejecutar:
 
-```(venv) ~/FastAPI_Sqlite$ pip3 install -r requirements.txt```
-
+```
+(venv) ~/FastAPI_Sqlite$ pip3 install -r requirements.txt
+```
+<hr>
 
 ### Ejecutar aplicación manualmente
 
@@ -37,7 +39,7 @@ INFO:     Started server process [219706]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 ```
-
+<hr>
 
 ### API Swagger | http://127.0.0.1:8000
 
