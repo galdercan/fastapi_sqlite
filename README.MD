@@ -67,7 +67,9 @@ Una vez iniciada la API , la url de inicio `/` nos redireccionara al swagger `/d
 
 <h4>Ver candidatos creados</h4>
 
-Por defecto tiene ya mis datos como candidato,
+El endpoint devuelve un listado en formato JSON de todos los candidatos creados con codigo 200. Por defecto tiene ya mis datos como candidato.
+Si no existiesen candidatos devuelve un 400.
+
 
  1. Desde terminal GET a http://127.0.0.1:8000/candidatos
    ```
@@ -79,7 +81,10 @@ Por defecto tiene ya mis datos como candidato,
  2. Usando el endpoint mediante el swagger o navegador en `/candidatos`
 
 
+
 <h4>Encontrar un candidato creado a través del DNI</h4>
+
+El endpoint devuelve un JSON de candidato que coincida el dni, con codigo 200. Si no existe devuelve un 400
 
  1. GET a http://127.0.0.1:8000/candidato/{dni}
 
@@ -89,3 +94,4 @@ Por defecto tiene ya mis datos como candidato,
       -H 'accept: application/json'
    ```
  2. Usando el endpoint mediante el swagger o navegador en  `/candidato/{dni} `
+
