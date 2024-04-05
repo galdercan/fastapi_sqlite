@@ -27,7 +27,7 @@ Si queremos instalarlas manualmente o añadir nuevas, una vez dentro del entorrn
 
 Desde terminal, ejecutar `make all` en la raiz del proyecto.
 
-Esto iniciara el entorno virtual, instalará las dependencias en caso de no tenerlas y lanzará la aplicación.
+Esta ejecuccion iniciara el entorno virtual, instalará las dependencias en caso de no tenerlas (siempre actualizará nuevas liberias que añadamos a posterior) y lanzará la aplicación.
 
 ```
 ~/FastAPI_Sqlite$ make all
