@@ -3,6 +3,7 @@ import sqlalchemy
 from .database import Base
 
 class Candidate(Base):
+    
     __tablename__ = 'candidatos'
     
     dni = sqlalchemy.Column(sqlalchemy.String, primary_key=True, index=True)

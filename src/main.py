@@ -2,6 +2,7 @@
 import asyncio
 from fastapi import FastAPI, Depends, HTTPException, Response
 from fastapi.responses import JSONResponse
+from fastapi.responses import RedirectResponse
 
 # dependencias
 from . import crud, schemas, models
@@ -36,11 +37,16 @@ def get_db():
     finally:
         db.close()
 
+# Inicio
+@app.get("/")
+async def root():
+    return RedirectResponse(url="/docs")
+
 
 # Generar un candidato nuevo
 @app.post("/candidato/", response_model=schemas.CandidateRead,tags=["Candidatos"])
 async def create_candidate(candidate: schemas.CandidateCreate, db: Session = Depends(get_db)):
-    # Comprobar si el candidato ya existe de forma asíncrona
+    
     checkCandidate = await asyncio.to_thread(crud.get_candidate_by_dni, db, candidate.dni)
 
     if checkCandidate:
@@ -52,7 +58,6 @@ async def create_candidate(candidate: schemas.CandidateCreate, db: Session = Dep
     return JSONResponse(content={"message": "Candidato creado correctamente"}, status_code=201)
 
 
-
 #Obtener candidato por dni
 @app.get("/candidato/{dni}", response_model=schemas.CandidateRead, tags=["Candidatos"], responses={200: {"model": schemas.CandidateRead}, 404: {"model": str}})
 async def read_candidate(dni: str, db: Session = Depends(get_db)):
@@ -61,6 +66,7 @@ async def read_candidate(dni: str, db: Session = Depends(get_db)):
 
     if candidate is None:
         return JSONResponse(status_code=404, content={"message": "Candidato no encontrado"})
+    
     
     return schemas.CandidateRead.from_orm(candidate)
 
