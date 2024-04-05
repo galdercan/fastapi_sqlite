@@ -17,13 +17,13 @@ Si queremos instalarlas manualmente o añadir nuevas, una vez dentro del entorrn
 ```
 <hr>
 
-### Ejecutar aplicación manualmente
+### Ejecutar manualmente la aplicación 
 
 1. Desde terminal, iniciar entorno virtual en linux `python3 -m venv venv` desde la raiz.
 
 2. Ejecutar la aplicacion: `(venv) uvicorn src:main:app --reload`
 
-### Ejecutar con Makefile
+### Ejecutar automáticamente con Makefile
 
 Desde terminal, ejecutar `make all` en la raiz del proyecto.
 
